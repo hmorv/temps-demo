@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Consulta el temps actual amb JSON</title>
+	<!--<script type='text/javascript' src='js/jsonp.js'></script>-->
+	<script type='text/javascript' src='js/ui.js'></script>
+	<script type='text/javascript' src='js/weather.js'></script>
+	<link rel='stylesheet' type='text/css' href='css/estils.css'/>
+</head>
+<body>
+	<!--<script>test();</script>-->
+	<div id='envoltori'>
+		<header>
+			<h1>Consulta el temps actual amb JSON</h1>
+			<form id='formulari'>
+				<fieldset>
+					<legend>El temps amb JSON</legend>
+					<label for='entrada'>Selecciona la ciutat <input type='text' id='entrada'/></label>
+					<button type='button' onclick='obtenirDadesTemps()'>Pica</button>
+				</fieldset>
+			</form>
+		</header>
+		<content>
+			<div id='blocjson'>
+				<h1>Resposta JSON</h1>
+				<div id='json'></div>
+			</div>
+			<div id='blocresultat'>
+				<h1>Resultat amb tractament de dades</h1>
+				<div id='widget'></div>
+			</div>
+			<button type='button' class='boto' id='boto' onclick="swapvisible('javascript');canviarTextMarca('sboto','mostrar JS','ocultar JS');" >mostrar JS</button>
+			<div id='javascript'>
+				<h1>Codi JavaScript</h1>
+				<iframe  src='js/weather.js'></iframe>
+			</div>
+		</content>
+		<footer>PalmaCodi 2015</footer>
+	</div>
+</body>
+</html>
